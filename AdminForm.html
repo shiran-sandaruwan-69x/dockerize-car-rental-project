@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/AdminForm.css">
+    <title>Eazy car Rental System</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 panal">
+            <div class="left-panal" style="overflow:auto">
+                <div class="image">
+                    <img class="profile-image" src="" alt="">
+                    <br>
+                    <p class="username"></p>
+                </div>
+                <div style="text-align: right; width: 100%">
+                    <button class="btn-hover l-pnl-btn btn-custom btn-custom-selected" id="btn-home">daily status</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-customers">active customers</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-cars">change cars</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-drivers">change drivers</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-orders">place booking</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-payments">return booking</button>
+                    <button class="btn-hover l-pnl-btn btn-custom" id="btn-reports"></button>
+                    <div style="color: white; position: absolute;bottom: 15px;left:40%; cursor: pointer">
+<!--                        <h6 id="logout"></h6>-->
+                        <a class="form-control bg-dark text-white font-weight-bold" href="index.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 panal">
+            <div class="main-panal" style="overflow:auto">
+                <div class="container-fluid">
+
+                    <div id="Dashboard">
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="card mb-3 card-shadow">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title" style="text-align: center">....admin status....</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                <div class="card mb-5 card-shadow" style="height: 300px; overflow: auto">
+                                    <div class="card-body">
+                                        <div class="cust-dash card-height">
+                                            <h5 class="card-title">....customers status....</h5>
+                                        </div>
+
+                                        <div class="row ml-0 mr-0 mt-2">
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card text-white" style="background: #2c3e50">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>no of customers</pa>
+                                                        <h3 id="noofcust">0</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card text-white" style="background: #2c3e50">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>active customers</pa>
+                                                        <h3 id="noofuncust">2</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card-2 text-white" style="background: white">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>valid customers</pa>
+                                                        <h3 id="noofvecust">0</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="banner-card-2 text-white" style="margin-top: 10px;background: white">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>rejected customers</pa>
+                                                        <h3 style="bottom: 3px">0</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                                <div class="card mb-5 card-shadow" style="height: 300px; overflow: auto">
+                                    <div class="card-body">
+                                        <div class="cust-dash card-height">
+                                            <h5 class="card-title">.....drivers status.....</h5>
+                                        </div>
+
+                                        <div class="row ml-0 mr-0 mt-2">
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card text-white" style="background: #2c3e50">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>no of drivers</pa>
+                                                        <h3 id="nooddeivers">0</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card text-white" style="background: #2c3e50">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>active drivers</pa>
+                                                        <h3 id="noofverifyeddeivers">0</h3>
+                                                    </div>
+                                                </div>
+<!--                                                <div class="banner-card-2 text-white"-->
+<!--                                                     style="margin-top: 10px ;background: white">-->
+<!--                                                    <div style="margin-left: 10px">-->
+<!--                                                        <pa>rejected drivers</pa>-->
+<!--                                                        <h3 style="bottom: 3px">0</h3>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-4 com-lh-4 col-xl-4">
+                                                <div class="banner-card text-white" style="background: white">
+                                                    <div style="margin-left: 10px">
+                                                        <pa>non verified drivers</pa>
+                                                        <h3>0</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="Customers">
+                        <div class="row ml-0 mr-0 mt-1">
+                            <div class="card mb-2 card-shadow ">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title" style="text-align: center">admin / customers details</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-box" style="height: 250px; overflow: no-display">
+                            <h6 style="text-align: center">un active customer / details</h6>
+                            <div class="table-responsive-lg">
+                                <table class="table table-hover">
+                                    <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">id </th>
+                                        <th scope="col">name</th>
+                                        <th scope="col">Nic No</th>
+                                        <th scope="col">Driving Licence No</th>
+<!--                                        <th scope="col">View Driving Licence</th>-->
+<!--                                        <th scope="col">View NIC</th>-->
+<!--                                        <th scope="col">Verify</th>-->
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tblCusBody">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="search-box">
+                                <div class="form-inline" style="display: block">
+<!--                                    <input type="text" class="form-control" id="searchcustomer"-->
+<!--                                           style="margin-right: 10px">-->
+<!--                                    <button class="btn btn-primary">un active customer</button>-->
+<!--                                    <button class="btn btn-primary">delete un active customer</button>-->
+                                </div>
+                            </div>
+                        </div>
+                        <h6 style="text-align: center">active customer / details</h6>
+                        <div class="row ml-0 mr-0 mt-2">
+
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">User Name</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Nic No</th>
+                                            <th scope="col">Driving Licence No</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Address</th>
+                                            <th scope="col">Contact No</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblCusAllBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+<!--                            <div class="btn-bottom">-->
+<!--                                <hr>-->
+<!--                                <button type="button" class="btn btn-primary" data-toggle="modal"-->
+<!--                                        data-target="#exampleModalCenter" id="customerAdd">Add-->
+<!--                                </button>-->
+<!--                                <button type="button" class="btn btn-success">Update</button>-->
+<!--                                <button type="button" class="btn btn-danger">Delete</button>-->
+<!--                                <button type="button" class="btn btn-secondary">Clear</button>-->
+<!--                            </div>-->
+
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Add User</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputUserName">Username</label>
+                                                        <input type="text" class="form-control" id="inputUserName"
+                                                               placeholder="yashitha" required>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputPassword">Password</label>
+                                                        <input type="password" class="form-control" id="inputPassword"
+                                                               placeholder="" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputName">Name</label>
+                                                        <input type="text" class="form-control" id="inputName"
+                                                               placeholder="Yashitha Nadiranga" required>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputContactNo">Contact No</label>
+                                                        <input type="number" class="form-control" id="inputContactNo"
+                                                               placeholder="0763437189" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputAddress">Address</label>
+                                                    <input type="text" class="form-control" id="inputAddress"
+                                                           placeholder="Kananwila,Horana" required>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Email</label>
+                                                    <input type="email" class="form-control" id="inputEmail"
+                                                           placeholder="Email" required>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputDrivingLicence">Driving Licence No</label>
+                                                        <input type="number" class="form-control"
+                                                               id="inputDrivingLicence"
+                                                               placeholder="" required>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputNIC">NIC No</label>
+                                                        <input type="number" class="form-control" id="inputNIC"
+                                                               placeholder="" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload NIC (Front)</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input"
+                                                               id="inputGroupFile01"
+                                                               aria-describedby="inputGroupFileAddon01">
+                                                        <label class="custom-file-label" for="inputGroupFile01">Choose
+                                                            file</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroupFileAddon02">Upload NIC (Back)</span>
+                                                    </div>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input"
+                                                               id="inputGroupFile02"
+                                                               aria-describedby="inputGroupFileAddon02">
+                                                        <label class="custom-file-label" for="inputGroupFile01">Choose
+                                                            file</label>
+                                                    </div>
+                                                </div>
+
+                                                <p style="font-size: 12px">By clicking Sign Up, you agree to our Terms,
+                                                    Data Policy and
+                                                    Cookie Policy. You may
+                                                    receive SMS notifications from us and can opt out at any time.</p>
+                                                <div class="modal-footer">
+                                                    <div style="width: 100%; text-align: center">
+                                                        <button type="button" class="btn btn-success" id="btncreate">
+                                                            Create Account
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="Cars">
+                        <div class="row ml-0 mr-0 mt-2 bg-dark">
+                            <div class="card mb-3 card-shadow">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title font-weight-bold  " style="text-align: center">....maintain cars details....</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers font-weight-bold bg-dark text-white">
+                                <h6>...cars types...</h6>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-2">
+
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+<!--                                <input type="text" class="form-control " placeholder="car id" id="idCar" disabled><br>-->
+                                <input type="text" class="form-control font-weight-bold" placeholder="Brand" id="brand">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="number" class="form-control font-weight-bold" placeholder="no of passengers"
+                                       id="passengers">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">
+                                <select class="custom-select font-weight-bold" id="cartype">
+                                    <option selected>car type</option>
+                                    <option value="1">General</option>
+                                    <option value="2">Premium</option>
+                                    <option value="3">Luxury</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">
+                                <select class="custom-select font-weight-bold" id="fueltype">
+                                    <option selected>fual Type</option>
+                                    <option value="1">Petrol</option>
+                                    <option value="2">Diesel</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2">
+                                <select class="custom-select font-weight-bold" id="transmisiontype">
+                                    <option selected>transmission type</option>
+                                    <option value="1">Gear</option>
+                                    <option value="2">Auto</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-4">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <input type="text" class="form-control font-weight-bold" placeholder="Reg No" id="regno">
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <select class="custom-select font-weight-bold" id="colour">
+                                    <option selected>colour :</option>
+                                    <option value="1">Red</option>
+                                    <option value="2">Green</option>
+                                    <option value="3">Black</option>
+                                    <option value="3">Orange</option>
+                                </select>
+                            </div>
+
+<!--                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">-->
+<!--                                <input type="text" class="form-control" placeholder="Image" id="image">-->
+<!--                            </div>-->
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers font-weight-bold bg-dark text-white">
+                                <h6>...rent duration prices...</h6>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <input type="text" class="form-control font-weight-bold" placeholder="id of car" id="xxx" disabled><br>
+                                <input type="text" class="form-control font-weight-bold" placeholder="Daily Rate" id="dailyrate">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <input type="text" class="form-control font-weight-bold" placeholder="Monthly Rate" id="monthlyrate">
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers bg-success text-white font-weight-bold">
+                                <h6>...payment cost...</h6>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <input type="text" class="form-control font-weight-bold" placeholder="price :" id="price">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <input type="text" class="form-control font-weight-bold" placeholder="duration :" id="duration">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <input type="number" class="form-control font-weight-bold" placeholder="price for extra KM :" id="extrakm">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-3">
+                                <input type="text" class="form-control font-weight-bold" placeholder="loss damage waiver :"
+                                       id="lossdamage">
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-4">
+                            <div class="btn-bottom" style="margin-right: 15px">
+                                <button type="button" class="btn btn-primary" id="savecar">add to system</button>
+                                <button type="button" class="btn btn-success" id="updatecar">update car</button>
+                                <button type="button" class="btn btn-danger" id="deleteCar">remove car</button>
+                                <button type="button" class="btn btn-secondary" id="clearCar">clear all</button>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="bg-success text-white font-weight-bold">
+                                        <tr>
+                                            <th scope="col">carid</th>
+                                            <th scope="col">regNo </th>
+                                            <th scope="col">carbrand</th>
+                                            <th scope="col">noOfpassengers</th>
+                                            <th scope="col">transmission</th>
+                                            <th scope="col">carType</th>
+                                            <th scope="col">carColour</th>
+                                            <th scope="col">fuelType</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblCarsBody" >
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Orders">
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="card mb-3 card-shadow">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title" style="text-align: center">view all </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers">
+                                <h4>Booking Details</h4>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="bg-success text-white">
+                                        <tr>
+                                            <th scope="col">booking</th>
+                                            <th scope="col">order date</th>
+                                            <th scope="col">notes</th>
+                                            <th scope="col">pickup date</th>
+                                            <th scope="col">return date</th>
+                                            <th scope="col">status</th>
+                                            <th scope="col">car id</th>
+                                            <th scope="col">customer id</th>
+                                            <th scope="col">driver id</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblOrdersBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+<!--                        ============================payment=======================-->
+                    <div id="Payments">
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="card mb-3 card-shadow">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title" style="text-align: center">...admin payment form
+                                        ...</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers">
+                                <h4>...booking return...</h4>
+                            </div>
+                        </div>
+                        <div class="row ml-0 mr-0 mt-2">
+
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="car no" id="bookingCusId"> <br>
+                                <input type="text" class="form-control" placeholder="order date" id="bookingOrderDate"><br>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="return date" id="bookingReturnDate">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="car no" id="bookingCarId">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="number" class="form-control" placeholder="no of km" id="bookingNoOfKm">
+                            </div>
+
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <select class="custom-select" id="bookingCarsType">
+                                    <option selected>Car Type</option>
+                                    <option value="1">General</option>
+                                    <option value="2">Premium</option>
+                                    <option value="3">Luxury</option>
+                                </select>
+                            </div>
+
+
+                                    <button type="button" class="btn btn-success" id="btnBookingAmount">check total : </button>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="number" class="form-control" placeholder="this car Amount :" id="bookingAmount">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="number" class="form-control" placeholder="add more car Total : 0 Rs//=" id="bookingTotal">
+                            </div>
+
+                        </div>
+                        <div class="row ml-0 mr-0 mt-2">
+
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="btn-bottom" style="margin-right: 15px">
+                                <button type="button" class="btn btn-primary" id="btnBookingReturn">booking return</button>
+
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="bg-success text-white">
+                                        <tr>
+                                            <th scope="col">driver id</th>
+                                            <th scope="col">order date</th>
+                                            <th scope="col">return date</th>
+                                            <th scope="col">car id</th>
+                                            <th scope="col">customer id</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblBookingReturn">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div id="Reports">
+
+                    </div>
+
+                    <div id="Drivers">
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="card mb-3 card-shadow">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title" style="text-align: center">...control driver
+                                        details...</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="headers">
+                                <h4>...driver details...</h4>
+                            </div>
+                        </div>
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control " placeholder="User Id" id="duserid" disabled><br>
+                                <input type="text" class="form-control" placeholder="User Name" id="dusername">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="Password" class="form-control" placeholder="Password" id="dpassword">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="Full Name" id="dfullname">
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="Contact No" id="dcontact">
+                            </div>
+                        </div>
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                                <input type="text" class="form-control" placeholder="NIC" id="NIC">
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="btn-bottom" style="margin-right: 15px">
+                                <button type="button" class="btn btn-primary" id="saveDriver">save diver</button>
+                                <button type="button" class="btn btn-success" id="updateDriver">update driver</button>
+                                <button type="button" class="btn btn-danger" id="deleteDriver">delete driver</button>
+                                <button type="button" class="btn btn-secondary" id="cleardriver">clear all</button>
+                            </div>
+                        </div>
+
+                        <div class="row ml-0 mr-0 mt-3">
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">NIC</th>
+                                            <th scope="col">Contact</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblDriverBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/AdminForm.js"></script>
+
+</body>
+</html>

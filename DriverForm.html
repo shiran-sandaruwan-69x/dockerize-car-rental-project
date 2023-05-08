@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/DriverDashboard.css">
+    <title>eazy car pvt ltd driver form</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 panal">
+            <div class="left-panal" style="overflow:auto">
+                <div class="image">
+                    <img class="profile-image" src="" alt="">
+                    <br>
+                    <p class="username" id="username">User Name</p>
+                </div>
+                <div style="text-align: right; width: 100%">
+                    <button class="btn-hover l-pnl-btn btn-custom btn-custom-selected text-white bg-success"  id="btn-dri-home">daily schedule </button>
+                    <button class="btn-hover l-pnl-btn btn-custom btn-custom" id="btn-dri-profile"></button>
+                    <div style="color: white; position: absolute;bottom: 15px;left:40%; cursor: pointer">
+                        <!--                        <h6 id="logout"></h6>-->
+                        <a class="form-control bg-dark text-white font-weight-bold" href="index.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 panal">
+            <div class="main-panal" style="overflow:auto">
+                <div class="container-fluid">
+                    <div id="Dashboard">
+                        <div class="row ml-0 mr-0 mt-2">
+                            <div class="card mb-3 card-shadow bg-dark text-white">
+                                <div class="card-body card-height">
+                                    <h5 class="card-title"  style="text-align: center">...Today Driver Details...</h5>
+                                </div>
+                            </div>
+
+                            <div class="table-box bg-success text-white" style="overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="bg-dark text-white">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">NIC</th>
+                                            <th scope="col">Contact</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="driverbody" class="text-white">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <div class="card mb-2 card-shadow bg-dark text-white">
+<!--                                <div class="card-body card-height">-->
+                                    <h6 class="card-title"  style="text-align: center">...Today Driver Details...</h6>
+<!--                                </div>-->
+                            </div>
+                            <div class="table-box" style="height: 250px; overflow: no-display">
+                                <div class="table-responsive-lg">
+                                    <table class="table table-hover">
+                                        <thead class="bg-success text-white">
+                                        <tr>
+                                            <th scope="col">booking</th>
+                                            <th scope="col">order date</th>
+                                            <th scope="col">notes</th>
+                                            <th scope="col">pickup date</th>
+                                            <th scope="col">return date</th>
+                                            <th scope="col">status</th>
+                                            <th scope="col">car id</th>
+                                            <th scope="col">customer id</th>
+                                            <th scope="col">driver id</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tblOrdersBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+<!--            <div class="row ml-0 mr-0 mt-3">-->
+
+<!--            </div>-->
+
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/DriverDashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+/*Loading*/
+
+#Cust-Dashboard {
+    /*display: none;*/
+}
+
+#All-cars{
+    display: none;
+}
+#Drivers{
+    display: none;
+}
+#orders{
+    display: none;
+}
+
+
+
+/*Loading*/
+
+
+button:focus {
+    outline: none;
+}
+
+
+body {
+    margin-bottom: 0;
+    background-color: black;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+.username{
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.left-panal {
+    width: 95%;
+    height: 88vh;
+    background: transparent;
+    margin-top: 5vh;
+    margin-left: 5%;
+    /*border-radius: 15px 15px 15px 15px;*/
+}
+
+.main-panal {
+    width: 98%;
+    height: 90vh;
+    background: whitesmoke;
+    margin-top: 5vh;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.main-panal::-webkit-scrollbar {
+    display: none;
+}
+
+.left-panal::-webkit-scrollbar {
+    display: none;
+}
+
+.panal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.image {
+    text-align: center;
+}
+
+.profile-image {
+    margin-top: 25px;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.l-pnl-btn {
+    margin-top: 10px;
+    width: 90%;
+    height: 55px;
+    font-weight: bold;
+
+}
+
+.btn-hover{
+    color: white;
+    border-radius: 20px 0px 0px 25px;
+    background-color: rgba(0, 0, 255, 0.3);
+
+}
+
+.btn-custom {
+    border: transparent;
+    color: white;
+    background: none;
+}
+
+.btn-custom-selected {
+    background: whitesmoke;
+    color: black;
+    border-radius: 20px 0px 0px 25px;
+}
+
+.card-shadow{
+    -webkit-box-shadow: 0px 0px 20px 8px rgba(204,204,204,0.87);
+    -moz-box-shadow: 0px 0px 20px 8px rgba(204,204,204,0.87);
+    box-shadow: 0px 0px 20px 8px rgba(204,204,204,0.87);
+    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+}
+
+/*Customer*/
+
+.table-box{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+    height: 300px;
+}
+
+.search-box{
+    text-align: right !important;
+    width: 99%;
+}
+.btn-bottom{
+    text-align: right;
+    width: 100%;
+}
+.card-height{
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+.headers{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+    text-align: center;
+    background: #343A40;
+    color: white;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.alert-custom{
+    display: none;
+}
+
+#wedingGG{
+    width: 1038px;
+    height: 395px;
+}
